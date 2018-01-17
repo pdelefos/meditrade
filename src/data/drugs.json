@@ -1,0 +1,27 @@
+{
+  "drugs": [
+    {
+      "name": "Subutex",
+      "description": "Le subutex est un super medicament pour ce que vous avez",
+      "price": 4,
+      "qte": 5,
+      "owner": "Jean pharmacien"
+    },
+    {
+      "name": "Strongolix",
+      "description":
+        "Le Strongolix est un super medicament pour ce que vous avez",
+      "price": 19,
+      "qte": 1,
+      "owner": "Bob pharmacien"
+    },
+    {
+      "name": "Printoflu",
+      "description":
+        "Le Printoflu est un super medicament pour ce que vous avez",
+      "price": 36,
+      "qte": 7,
+      "owner": "Amandine pharmacien"
+    }
+  ]
+}
