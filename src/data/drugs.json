@@ -1,11 +1,10 @@
 {
   "drugs": [
     {
+      "id": 0,
       "name": "CARBOCAINE",
       "dci": "Chlorhydrate de mépivacaïne",
       "dose": "10 000 UI/flacon, poudre pour solution pour injection",
-      "quantite": 5,
-      "prix": 17.40,
       "indications": [
         "Anesthésie locale par infiltration",
         "Anesthésie régionale lors d'intervention chirurgicale (sauf en obstétrique) : anesthésie tronculaire, plexique, caudale, péridurale."
@@ -18,11 +17,10 @@
       ]
     },
     {
+      "id": 1,
       "name": "ERWINASE",
       "dci": "Crisantaspase (asparaginase d’Erwinia chrysanthemi : L-asparaginase d’Erwinia)",
       "dose": "10 000 UI/flacon, poudre pour solution pour injection",
-      "quantite": 3,
-      "prix": 32.53,
       "indications": [
         "Erwinase est utilisé en association à d’autres agents chimiothérapeutiques pour le traitement des patients, principalement pédiatriques, atteints de leucémie aiguë lymphoblastique chez qui une hypersensibilité (allergie clinique ou inactivation silencieuse) à l’asparaginase native ou pégylée dérivée d’E. coli est apparue."
       ],
@@ -34,11 +32,10 @@
       ]
     },
     {
+      "id": 2,
       "name": "HEXASTAT",
       "dci": "Altrétamine",
       "dose": "100mg, gélule",
-      "quantite": 1,
-      "prix": 27.5,
       "indications": [
         "HEXASTAT est indiqué en traitement de 2ème ligne du cancer de l'ovaire et du cancer bronchique à petites cellules."
       ],

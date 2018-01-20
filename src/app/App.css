@@ -1,8 +1,41 @@
-@font-face {
-  font-family: "RM Sans";
-  src: url("../assets/fonts/RMPro-Regular.otf") format("opentype");
+@font-face
+{
+    font-family: 'RM Sans';
+
+    src: url('../assets/fonts/RMPro-Regular.otf') format('opentype');
 }
 
-body {
-  font-family: "RM Sans";
+@font-face
+{
+    font-family: 'RM Sans Light';
+
+    src: url('../assets/fonts/RMPro-Light.otf') format('opentype');
+}
+
+body
+{
+    font-family: 'RM Sans';
+}
+
+.title--big
+{
+    font-family: 'RM Sans Light';
+    font-size: 24px;
+
+    letter-spacing: 1px;
+}
+
+.section
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.section .searchbar
+{
+    margin: 80px auto;
 }

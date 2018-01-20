@@ -3,11 +3,6 @@
     position: relative;
 }
 
-.searchbar .title--big
-{
-    font-size: 24px;
-}
-
 .searchbar .input--text,
 .searchbar .button--submit
 {
@@ -44,6 +39,7 @@
     width: 395px;
 
     border: 1px solid #666;
+    background-color: #fff;
 }
 
 .searchbar .suggestion-box--hidden

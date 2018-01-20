@@ -1,0 +1,36 @@
+.searchlist
+{
+    width: 470px;
+}
+
+.searchlist .title
+{
+    margin-bottom: 40px;
+}
+
+.searchlist .list
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+
+    padding: 0;
+}
+
+.searchlist .list .item
+{
+    font-size: 16px;
+
+    height: 30px;
+
+    list-style: none;
+
+    cursor: pointer;
+    text-decoration: underline;
+
+    color: #4065ac;
+}

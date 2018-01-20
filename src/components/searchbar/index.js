@@ -26,8 +26,8 @@ class SearchBar extends Component {
           onChange={this.handleSearch}
         />
         <div className={(this.state.suggestionBoxVisible) ? "suggestion-box" : "suggestion-box suggestion-box--hidden"}>
-          {this.state.suggestions.map((s, index) => {
-            return this.highlightWord(s.name, this.state.value, index)
+          {this.state.suggestions.slice(0, 5).map(s => {
+            return this.highlightWord(s.name, this.state.value, s.id)
           }
           )}
         </div>
@@ -44,8 +44,10 @@ class SearchBar extends Component {
     const startPart = word.substr(0, indexStartSubstr)
     const highlightedPart = <span className="item--highlighted">{substr}</span>
     const endPart = word.substr(indexStartSubstr + substr.length, word.length)
-    return <span key={index} className="item">{startPart}{highlightedPart}{endPart}</span>
+    return <span key={index} className="item" onClick={evt => this.props.handleClick(evt, index)}>{startPart}{highlightedPart}{endPart}</span>
   }
+
+
 
   handleSearch(evt) {
     evt.preventDefault()
@@ -55,7 +57,7 @@ class SearchBar extends Component {
       return
     }
     this.setState({
-      suggestions: this.state.drugs.filter(drug =>
+      suggestions: this.state.drugs.filter((drug, index) =>
         drug.name.toLowerCase().includes(evt.target.value.toLowerCase())
       ),
       suggestionBoxVisible: true
