@@ -1,33 +1,91 @@
-.searchbar .title--big {
-  font-size: 24px;
+.searchbar
+{
+    position: relative;
+}
+
+.searchbar .title--big
+{
+    font-size: 24px;
 }
 
 .searchbar .input--text,
-.searchbar .button--submit {
-  vertical-align: middle;
+.searchbar .button--submit
+{
+    vertical-align: middle;
 }
 
-.searchbar .input--text {
-  width: 400px;
-  height: 50px;
-  border: 1px solid #666;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  font-size: 18px;
-  padding-left: 10px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.searchbar .input--text
+{
+    font-size: 18px;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 400px;
+    height: 50px;
+    padding-left: 10px;
+
+    border: 1px solid #666;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
-.searchbar .button--submit {
-  height: 51px;
-  width: 70px;
-  border: none;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #4065ac;
+.searchbar .suggestion-box
+{
+    position: absolute;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+        flex-direction: column;
+
+    width: 395px;
+
+    border: 1px solid #666;
 }
 
-.search-logo {
-  width: 100%;
+.searchbar .suggestion-box--hidden
+{
+    display: none;
+}
+
+.searchbar .suggestion-box .item
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: middle;
+    align-items: center;
+    -ms-flex-align: center;
+
+    height: 30px;
+    padding-left: 10px;
+
+    cursor: pointer;
+}
+
+.searchbar .suggestion-box .item--highlighted
+{
+    color: #fff;
+    background-color: #4065ac;
+}
+
+.searchbar .button--submit
+{
+    width: 70px;
+    height: 50px;
+
+    cursor: pointer;
+
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #4065ac;
+}
+
+.search-logo
+{
+    width: 100%;
 }
