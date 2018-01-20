@@ -1,1 +1,8 @@
+@font-face {
+  font-family: "RM Sans";
+  src: url("../assets/fonts/RMPro-Regular.otf") format("opentype");
+}
 
+body {
+  font-family: "RM Sans";
+}

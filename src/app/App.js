@@ -1,16 +1,22 @@
 import React, { Component } from "react"
-import drugs from "../data/drugs.json"
+import Header from "../components/header"
+import SearchBar from "../components/searchbar"
 import "./App.css"
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {}
-    console.log(drugs.drugs[0])
-  }
-
   render() {
-    return <div className="App" />
+    return (
+      <div className="App">
+        <Header />
+        <div className="section">
+          <SearchBar
+            className="searchbar"
+            title="Recherchez votre médicament"
+            placeholder="exemple : GAMMATETANOS"
+          />
+        </div>
+      </div>
+    )
   }
 }
 
