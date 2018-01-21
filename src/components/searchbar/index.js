@@ -18,6 +18,7 @@ class SearchBar extends Component {
     return (
       <div className="searchbar">
         <h1 className="title title--big">{this.props.title}</h1>
+        <div className="search-input-container">
         <input
           className="input input--text"
           type="text"
@@ -33,7 +34,7 @@ class SearchBar extends Component {
         </div>
         <button className="button button--submit">
           <img className="search-logo" src={loupe} alt="rechercher" />
-        </button>
+        </button></div>
       </div>
     )
   }

@@ -7,7 +7,7 @@ import "./style.css"
 const Header = props => {
   return (
     <div className="header">
-      <img className="logo" src={logo} alt="meditrade-logo" />
+      <img className="logo" src={logo} alt="meditrade-logo" onClick={props.handleClick} />
       <Account title="MON COMPTE" />
     </div>
   )

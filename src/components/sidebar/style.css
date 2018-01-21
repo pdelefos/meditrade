@@ -1,0 +1,33 @@
+.sidebar
+{
+    overflow-y: auto;
+
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 30%;
+    height: calc(100vh - 91px);
+    padding: .1em 10px;
+
+    background-color: #eee;
+}
+
+.sidebar .title
+{
+    font-family: 'RM Sans';
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.sidebar .product-property,
+.sidebar li
+{
+    font-size: 15px;
+}
+
+.sidebar li
+{
+    margin-bottom: 4px;
+
+    list-style: none;
+}

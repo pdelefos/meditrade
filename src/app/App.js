@@ -10,19 +10,21 @@ class App extends Component {
     super(props)
     this.state = {
       drugs: dataDrugs.drugs,
-      currentDrug: ""
+      currentDrug: ""//dataDrugs.drugs[1]
     }
     this.handleClick = this.handleClick.bind(this)
+    this.handleReset = this.handleReset.bind(this)
+
   }
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header handleClick={this.handleReset} />
         {this.state.currentDrug === "" &&
           <Search handleClick={this.handleClick} />
         }
         {this.state.currentDrug !== "" &&
-          <Result drug={this.state.currentDrug} />
+          <Result drug={this.state.currentDrug} handleClick={this.handleClick} />
         }
       </div>
     )
@@ -30,6 +32,9 @@ class App extends Component {
   handleClick(evt, index) {
     this.setState({ currentDrug: this.state.drugs[index] })
     console.log(this.state.currentDrug);
+  }
+  handleReset() {
+    this.setState({ currentDrug: "" })
   }
 }
 
