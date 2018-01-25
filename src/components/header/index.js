@@ -1,14 +1,14 @@
 import React from "react"
 import Account from "../account"
-import logo from "../../assets/images/logo-white.png"
+import Logo from "../logo"
 import "./style.css"
 // import logo from ''
 
 const Header = props => {
   return (
     <div className="header">
-      <img className="logo" src={logo} alt="meditrade-logo" onClick={props.handleClick} />
-      <Account title="MON COMPTE" />
+      <Logo onClick={props.handleClick} />
+      <Account title="Mon compte" />
     </div>
   )
 }

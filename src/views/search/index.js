@@ -1,29 +1,18 @@
-import React, { Component } from "react"
+import React from "react"
 import SearchBar from "../../components/searchbar"
-import SearchList from "../../components/searchlist"
+import "./style.css"
 
-class Search extends Component {
-
-	render() {
-		return (
-			<div>
-				<div className="section">
-					<SearchBar
-						className="searchbar"
-						title="Recherchez votre médicament"
-						placeholder="exemple : CARBOCAINE"
-						handleClick={this.props.handleClick}
-					/>
-				</div>
-				<div className="section">
-					<SearchList
-						title="Médicaments les plus recherchés"
-						handleClick={this.props.handleClick}
-					/>
-				</div>
-			</div>
-		)
-	}
+const Search = ({ handleSearch }) => {
+  return (
+    <div>
+      <SearchBar
+        className="searchbar"
+        title="Recherchez un médicament"
+        placeholder=""
+        handleSearch={handleSearch}
+      />
+    </div>
+  )
 }
 
 export default Search

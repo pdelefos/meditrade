@@ -1,23 +1,26 @@
 import React, { Component } from "react"
 import Result from "../result"
-import dataDrugs from "../../data/drugs.json"
 import "./style.css"
 
-class ResultList extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			drugs: dataDrugs.drugs
-		}
-	}
-	render() {
-		console.log(this.props.results);
-		if (this.props.results.length === 0)
-			return <span>Aucun resultat pour cette recherche</span>
-		return <ul>
-			{this.props.results.map((res, index) => <Result key={index} delay={res.delay} price={res.unitPrice} />)}
-		</ul>
-	}
+const ResultList = props => {
+  return (
+    <div className="list-results">
+      <span>
+        {props.results.length === 0
+          ? "Aucun résultat pour cette recherche"
+          : props.results.length + " résultats"}
+      </span>
+      <ul>
+        {props.results.map((res, index) => (
+          <Result
+            key={res.codeCIS}
+            product={res}
+            handleClick={props.handleClick}
+          />
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default ResultList

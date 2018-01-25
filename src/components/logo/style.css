@@ -1,0 +1,11 @@
+.logo {
+  font-size: 25px;
+  cursor: pointer;
+}
+.logo .title--bold {
+  font-family: "RM Sans";
+}
+
+.logo .title--light {
+  font-family: "RM Sans Light";
+}

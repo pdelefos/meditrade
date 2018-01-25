@@ -1,28 +1,40 @@
 {
-	"products": [
-		{
-			"drugId": 1,
-			"qte": 3,
-			"unitPrice": 17.34,
-			"delay": 1
-		},
-		{
-			"drugId": 1,
-			"qte": 1,
-			"unitPrice": 17.34,
-			"delay": 2
-		},
-		{
-			"drugId": 1,
-			"qte": 5,
-			"unitPrice": 17.34,
-			"delay": 2
-		},
-		{
-			"drugId": 1,
-			"qte": 1,
-			"unitPrice": 17.34,
-			"delay": 3
-		}
-	]
+  "products": [
+    {
+      "drugId": 1,
+      "quantity": 3,
+      "unitPrice": 17.34,
+      "delay": 1
+    },
+    {
+      "drugId": 1,
+      "quantity": 1,
+      "unitPrice": 17.34,
+      "delay": 2
+    },
+    {
+      "drugId": 1,
+      "quantity": 5,
+      "unitPrice": 17.34,
+      "delay": 2
+    },
+    {
+      "drugId": 1,
+      "quantity": 1,
+      "unitPrice": 17.34,
+      "delay": 3
+    },
+    {
+      "drugId": 0,
+      "quantity": 3,
+      "unitPrice": 16.4,
+      "delay": 5
+    },
+    {
+      "drugId": 0,
+      "quantity": 2,
+      "unitPrice": 7.34,
+      "delay": 2
+    }
+  ]
 }

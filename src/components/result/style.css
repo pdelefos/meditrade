@@ -1,6 +1,64 @@
-.result-item
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.result-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  background-color: #d8d8d8;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.result-item .picture {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.result-item .picture img {
+  width: 40%;
+}
+
+.result-item .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  width: 60%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.result-item .info span {
+  margin-bottom: 10px;
+}
+
+.result-item .info .info__name {
+  font-size: 18px;
+}
+
+.result-item .info .info__seller {
+  font-family: "RM Sans Light";
+}
+
+.result-item .price,
+.result-item .delay {
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }

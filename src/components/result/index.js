@@ -1,17 +1,29 @@
 import React from "react"
+import placeholder from "../../assets/images/placeholder.svg"
 import "./style.css"
 
-const Result = props => {
-	return (
-		<li className="result-item">
-			<span className="result__elem result__delay">
-				{props.delay === 1 ? props.delay + "jour" : props.delay + "jours"}
-			</span>
-			<span className="result__elem result__price">{props.price}€</span>
-			<span className="result__elem result__quantity"></span>
-			<span className="result__elem result__buy"></span>
-		</li>
-	)
+const Result = ({ product, handleClick }) => {
+  return (
+    <li
+      className="result-item"
+      onClick={evt => {
+        handleClick(evt, product.codeCIS)
+      }}
+    >
+      <div className="picture">
+        <img src={placeholder} alt="" />
+      </div>
+      <div className="info">
+        <span className="info__name">{product.denomination}</span>
+        <span className="info__seller">Pharmacie en region parisienne</span>
+      </div>
+      <div className="price">20$</div>
+      <div className="delay">24H</div>
+      <div>
+        <button type="submit" />
+      </div>
+    </li>
+  )
 }
 
 export default Result

@@ -1,30 +1,21 @@
-.header
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-line-pack: justify;
-    -webkit-box-align: center;
-    align-items: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    width: 100%;
-    height: 90px;
-    padding: 0 40px;
-
-    background-image: -webkit-gradient(linear, left top, right top, from(#85d4f5), to(#cce1ff));
-    background-image: linear-gradient(to right, #85d4f5, #cce1ff);
-}
-
-.header .logo
-{
-    width: 223px;
-    height: 56px;
-
-    cursor: pointer;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 90px;
+  padding: 0 40px;
+  background-color: #999;
+  /* background-image: -webkit-gradient(linear, left top, right top, from(#85d4f5), to(#cce1ff));
+    background-image: linear-gradient(to right, #85d4f5, #cce1ff); */
 }
