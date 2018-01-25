@@ -1,24 +1,33 @@
 import React from "react"
+import placeHolder from "../../assets/images/placeholder.svg"
 import "./style.css"
 
 const Sidebar = props => {
   return (
     <div className="sidebar">
-      <h1 className="title title--big">{props.drug.denomination}</h1>
-      <span className="product-property">{props.drug.dose}</span>
-      <img
-        className="product-picture"
-        src={props.drug.picture}
-        alt={props.drug.name}
-      />
-      <h2 className="title title--big">DCI</h2>
-      <span className="product-property">{props.drug.dci}</span>
-      <h2 className="title title--big">Indications</h2>
-      {renderListElem(props.drug.indications)}
-      <h2 className="title title--big">Laboratoires</h2>
-      <span className="product-property">{props.drug.titulaires[0]}</span>
-      <h2 className="title title--big">Observations</h2>
-      {renderListElem(props.drug.observations)}
+      {props.drug && (
+        <div className="sidebar-inner">
+          <h1 className="title title--big">{props.drug.denomination}</h1>
+          <span className="product-property">{props.drug.dose}</span>
+          <div className="picture-frame">
+            <img
+              className="product-picture"
+              src={placeHolder}
+              alt={props.drug.name}
+            />
+          </div>
+          <h2 className="title title--big">Présentation</h2>
+          <span className="product-property">
+            {props.drug.presentations[0].libelle}
+          </span>
+          <h2 className="title title--big">Voies d'administration</h2>
+          {renderListElem(props.drug.voiesAdministration)}
+          <h2 className="title title--big">Conditions de préscription</h2>
+          {renderListElem(props.drug.conditionsPrescriptionDelivrance)}
+          <h2 className="title title--big">Laboratoire</h2>
+          <span className="product-property">{props.drug.titulaires[0]}</span>
+        </div>
+      )}
     </div>
   )
 }

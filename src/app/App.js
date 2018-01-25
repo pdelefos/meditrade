@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="section">
-          {<Sidebar drug={this.state.currentDrug} />}
+          <Sidebar drug={this.state.currentDrug} />
           <div className="search-section">
             <SearchBar
               className="searchbar"

@@ -17,12 +17,10 @@ const Result = ({ product, handleClick }) => {
         <span className="info__name">{product.denomination}</span>
         <span className="info__seller">Pharmacie en region parisienne</span>
       </div>
-      <div className="quantity">4</div>
+      <div className="quantity">XX</div>
       <div className="price">XX €</div>
       <div className="delay">XX H</div>
-      <div>
-        <button type="submit" />
-      </div>
+      <div />
     </li>
   )
 }

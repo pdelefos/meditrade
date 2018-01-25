@@ -18,7 +18,9 @@
 }
 
 .info-bar .qte,
-.info-bar .price,
-.info-bar .delay {
+.info-bar .price {
   width: 10%;
+}
+.info-bar .delay {
+  width: 20%;
 }

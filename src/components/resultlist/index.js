@@ -13,7 +13,7 @@ const ResultList = props => {
         </span>
         <span className="qte">Quantité</span>
         <span className="price">Prix</span>
-        <span className="delay">Délais</span>
+        <span className="delay">Délai de livraison</span>
       </span>
       <ul>
         {props.results.map((res, index) => (
