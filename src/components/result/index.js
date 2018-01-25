@@ -17,8 +17,9 @@ const Result = ({ product, handleClick }) => {
         <span className="info__name">{product.denomination}</span>
         <span className="info__seller">Pharmacie en region parisienne</span>
       </div>
-      <div className="price">20$</div>
-      <div className="delay">24H</div>
+      <div className="quantity">4</div>
+      <div className="price">XX €</div>
+      <div className="delay">XX H</div>
       <div>
         <button type="submit" />
       </div>

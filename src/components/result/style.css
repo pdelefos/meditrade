@@ -34,7 +34,7 @@
   -ms-flex-direction: column;
   flex-direction: column;
 
-  width: 60%;
+  width: 50%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -52,6 +52,7 @@
   font-family: "RM Sans Light";
 }
 
+.result-item .quantity,
 .result-item .price,
 .result-item .delay {
   width: 10%;

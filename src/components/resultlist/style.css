@@ -6,3 +6,19 @@
 .list-results ul {
   padding: 0;
 }
+
+.info-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.info-bar .number {
+  width: 60%;
+}
+
+.info-bar .qte,
+.info-bar .price,
+.info-bar .delay {
+  width: 10%;
+}

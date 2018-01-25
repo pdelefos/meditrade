@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Header from "../components/header"
 import Sidebar from "../components/sidebar"
-import Search from "../views/search"
+import SearchBar from "../components/searchbar"
 import ResultList from "../components/resultlist"
 import axios from "axios"
 import "./App.css"
@@ -22,9 +22,14 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="section">
-          <Sidebar drug={this.state.currentDrug} />
+          {<Sidebar drug={this.state.currentDrug} />}
           <div className="search-section">
-            <Search handleSearch={this.handleSearch} />
+            <SearchBar
+              className="searchbar"
+              title="Recherchez un médicament"
+              placeholder=""
+              handleSearch={this.handleSearch}
+            />
             <ResultList
               results={this.state.results}
               handleClick={this.handleClick}
@@ -44,13 +49,15 @@ class App extends Component {
     const apiMeds = "https://open-medicaments.fr/api/v1/medicaments?query="
     const apiMedInfos = "https://open-medicaments.fr/api/v1/medicaments/"
 
-    const getMed = value => axios.get(apiMeds + searchValue + "&limit=100")
-    const getMedInfo = codeCIS => axios.get(apiMedInfos + codeCIS)
+    const getMed = value =>
+      axios.get(apiMeds + searchValue).then(res => res.data)
+    const getMedInfo = codeCIS =>
+      axios.get(apiMedInfos + codeCIS).then(res => res.data)
 
-    getMed(searchValue).then(res =>
-      axios.all(res.data.map(data => getMedInfo(data.codeCIS))).then(res =>
+    getMed(searchValue).then(listCIS =>
+      axios.all(listCIS.map(med => getMedInfo(med.codeCIS))).then(meds =>
         this.setState({
-          results: res.map(res => res.data)
+          results: meds
         })
       )
     )
@@ -58,8 +65,9 @@ class App extends Component {
 
   handleClick(evt, codeCIS) {
     const apiMedInfos = "https://open-medicaments.fr/api/v1/medicaments/"
-    const getMedInfo = codeCIS => axios.get(apiMedInfos + codeCIS)
-    getMedInfo(codeCIS).then(res => this.setState({ currentDrug: res.data }))
+    const getMedInfo = codeCIS =>
+      axios.get(apiMedInfos + codeCIS).then(res => res.data)
+    getMedInfo(codeCIS).then(data => this.setState({ currentDrug: data }))
   }
 }
 

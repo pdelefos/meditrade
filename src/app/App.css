@@ -30,6 +30,12 @@ body {
   justify-content: center;
 }
 
+.search-section {
+  width: 70%;
+  height: calc(100vh - 91px);
+  overflow-y: auto;
+}
+
 .section .searchbar {
   margin: 80px auto;
 }

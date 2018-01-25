@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React from "react"
 import "./style.css"
 
 const Sidebar = props => {
@@ -16,7 +16,7 @@ const Sidebar = props => {
       <h2 className="title title--big">Indications</h2>
       {renderListElem(props.drug.indications)}
       <h2 className="title title--big">Laboratoires</h2>
-      <span className="product-property">{props.drug.laboratoire}</span>
+      <span className="product-property">{props.drug.titulaires[0]}</span>
       <h2 className="title title--big">Observations</h2>
       {renderListElem(props.drug.observations)}
     </div>
